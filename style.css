@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte personalizada */
+    background: linear-gradient(to right, #64b5f6, #81c784); /* Gradiente suave no fundo */
+    color: #333; /* Cor do texto padrão */
+    margin: 0; /* Remove margens padrão do body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o gradiente cubra toda a tela */
+}
+
+#container {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco transparente */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+#carro-quadrado {
+    width: 320px;
+    height: 220px;
+    margin: 20px auto;
+    border: none; /* Remove a borda padrão */
+    border-radius: 25px; /* Bordas mais arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb); /* Gradiente suave no quadrado */
+    overflow: hidden; /* Garante que a sombra acompanhe os cantos arredondados */
+}
+
+#carro-imagem {
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação mais interessante */
+}
+
+#carro-imagem:hover {
+    transform: scale(1.1); /* Aumenta um pouco mais a imagem */
+}
+
+p {
+    font-size: 20px;
+    color: #444;
+    font-weight: 500; /* Adiciona um peso à fonte */
+    letter-spacing: 0.5px; /* Espaçamento entre letras para melhorar a leitura */
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7); /* Sombra sutil no texto */
+}
+
+button {
+    padding: 14px 28px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px; /* Bordas ainda mais arredondadas */
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Sombra mais visível */
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1); /* Animação suave */
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Garante que o efeito do before apareça corretamente */
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(255, 255, 255, 0.3); /* Camada branca transparente */
+    transition: height 0.3s;
+    z-index: -1; /* Posiciona atrás do texto do botão */
+}
+
+button:hover {
+    transform: translateY(-3px); /* Eleva um pouco mais */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover::before {
+    height: 100%;
+}
+
+#desligar {
+    background-color: #f44336;
+}
+
+#desligar:hover {
+    background-color: #d32f2f;
+}
+
+#ligar {
+    background-color: #4caf50;
+}
+
+#ligar:hover {
+    background-color: #388e3c;
+}
+
+#acelerar {
+    background-color: #2196f3;
+}
+
+#acelerar:hover {
+    background-color: #1976d2;
+}
+
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#caminhao-imagem {
+    max-width: 300px;
+    max-height: 200px;
+    margin-bottom: 10px;
+    order: -1;
+}
+
+#info {
+    order: 1;
+}
+
+input[type="number"] {
+    order: 2;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    order: 3;
+}
+
+#carregar {
+    background-color: #9C27B0; /* Roxo */
+}
+
+#descarregar {
+    background-color: #FFEB3B; /* Amarelo */
+    color: black; /* Para garantir que o texto seja legível no fundo amarelo */
+}
+
+#ligar {
+    background-color: #4CAF50;
+}
+
+#desligar {
+    background-color: #f44336;
+}
+
+#acelerar {
+    background-color: #2196F3;
+}
+
+#frear {
+    background-color: #607D8B;
+}
